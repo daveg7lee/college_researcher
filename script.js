@@ -33,7 +33,9 @@ const onClickSubmitBtn = async () => {
   for (let i = 0; i < 10; i++) {
     const input = inputs.item(i);
     if (input.value) {
-      const response = await fetch(`http://localhost:3000/${input.value}`);
+      const response = await fetch(
+        `https://o19zfw1cjg.execute-api.ap-northeast-2.amazonaws.com/college/${input.value}`
+      );
       const json = await response.json();
       data.push(json);
     }
